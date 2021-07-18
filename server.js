@@ -16,7 +16,7 @@ io.on("connection",(socket)=>{
          client[id]=socket
    // console.log(client)
                                 })
-                                
+
         socket.on("message",(messy)=>{
           console.log("This is the message",messy)
           let reciever = messy.reciever
@@ -30,8 +30,8 @@ io.on("connection",(socket)=>{
 
 
 
-app.route("/").get((req,res)=>{
-    res.json("This is it")
+app.route("/check").get((req,res)=>{
+  return res.json("This is it")
 })
 
 server.listen(3000,"0.0.0.0",()=>{
