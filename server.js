@@ -36,7 +36,7 @@ app.route("/check").get((req,res)=>{
 })
 
 server.listen(port,"0.0.0.0",()=>{
-    console.log("Server Started",3000)
+    console.log("Server Started",port)
 })
 
 
