@@ -2,6 +2,7 @@ var express = require("express")
 var app = require('express')();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
+const port = process.env.PORT || 3000
 
 
 app.use(express.json())
@@ -34,7 +35,7 @@ app.route("/check").get((req,res)=>{
   return res.json("This is it")
 })
 
-server.listen(3000,"0.0.0.0",()=>{
+server.listen(port,"0.0.0.0",()=>{
     console.log("Server Started",3000)
 })
 
